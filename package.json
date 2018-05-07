@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/pub42/iiko-delivery.git"
   },
-  "dependencies": {
-    "iiko-request": "0.0.5",
-  },
   "keywords": [
     "iikocard5",
     "nodejs",
