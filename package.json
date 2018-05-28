@@ -1,25 +1,50 @@
 {
-  "name": "iiko-delivery",
-  "version": "0.0.2",
-  "description": "api iiko delivery",
-  "main": "iiko-delivery.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+  "_from": "git+https://github.com/pub42/iiko-delivery.git",
+  "_id": "iiko-delivery@0.0.2",
+  "_inBundle": false,
+  "_location": "/iiko-delivery",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "git+https://github.com/pub42/iiko-delivery.git"
+    "raw": "iiko-delivery@git+https://github.com/pub42/iiko-delivery.git",
+    "name": "iiko-delivery",
+    "escapedName": "iiko-delivery",
+    "rawSpec": "git+https://github.com/pub42/iiko-delivery.git",
+    "saveSpec": "git+https://github.com/pub42/iiko-delivery.git",
+    "fetchSpec": "https://github.com/pub42/iiko-delivery.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "/@sails-resto/core"
+  ],
+  "_resolved": "git+https://github.com/pub42/iiko-delivery.git#4f92b1ab3b4205999b60afcba299a1c65e085227",
+  "_spec": "iiko-delivery@git+https://github.com/pub42/iiko-delivery.git",
+  "_where": "D:\\Sites\\test-for-restocore\\node_modules\\@sails-resto\\core",
+  "author": {
+    "name": "42team"
+  },
+  "bugs": {
+    "url": "https://github.com/pub42/iiko-delivery/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "api iiko delivery",
+  "homepage": "https://github.com/pub42/iiko-delivery#readme",
   "keywords": [
     "iikocard5",
     "nodejs",
     "iiko",
     "npm"
   ],
-  "author": "42team",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pub42/iiko-delivery/issues"
+  "main": "iiko-delivery.js",
+  "name": "iiko-delivery",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pub42/iiko-delivery.git"
   },
-  "homepage": "https://github.com/pub42/iiko-delivery#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.3"
 }

@@ -24,7 +24,7 @@ const methods = {
     params: {
       revision: 'string'
     },
-    modifier: url => url + sails.config.webcore.iiko.organization
+    modifier: url => url + config.organization
   },
   getOrganization: {
     type: 'GET',
