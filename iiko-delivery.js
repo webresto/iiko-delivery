@@ -15,8 +15,7 @@ const methods = {
   getDeliveryTerminals: {
     type: 'GET',
     path: '/api/0/deliverySettings/getDeliveryTerminals/',
-    params: {organization: 'string'},
-    dev: true
+    params: {organization: 'string'}
   },
   getNomenclature: {
     type: 'GET',
@@ -31,8 +30,7 @@ const methods = {
     path: '/api/0/organization/list',
     params: {
       request_timeout: 'number'
-    },
-    dev: true
+    }
   },
   getStopList: {
     type: 'GET',
@@ -66,19 +64,14 @@ exports.init = function (_config) {
 exports.api = function (method, params, data) {
   return new Promise((resolve, reject) => {
 
-    // TODO: validation data for separate methods
-    if (methods[method].dev && !sails.config.webcore.development) {
-      reject({error: "Can call only in development mode"});
-    } else {
-      request.call(methods[method], params, methods[method].modifier, data).then(
-        result => {
-          resolve(result);
-        },
-        error => {
-          reject(error);
-        });
-
-    }
+    // TODO: validation data for separate method
+    request.call(methods[method], params, methods[method].modifier, data).then(
+      result => {
+        resolve(result);
+      },
+      error => {
+        reject(error);
+      });
   })
 };
 
