@@ -29,7 +29,7 @@ const methods = {
     type: 'GET',
     path: '/api/0/organization/list',
     params: {
-      request_timeout: 'number'
+      request_timeout: 'time'
     }
   },
   getStopList: {
@@ -43,7 +43,7 @@ const methods = {
     type: 'POST',
     path: '/api/0/orders/add',
     params: {
-      request_timeout: 'number'
+      request_timeout: 'time'
     }
   },
   getCities: {
