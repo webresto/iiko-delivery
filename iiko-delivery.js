@@ -52,6 +52,13 @@ const methods = {
     params: {
       organization: 'string'
     }
+  },
+  checkOrder: {
+    type: 'POST',
+    path: '/api/0/orders/checkCreate',
+    params: {
+      request_timeout: 'time'
+    }
   }
 };
 
