@@ -5,6 +5,14 @@
  * author: pub42 (xziy, ...)
  *
  */
+
+
+/**
+ * type:
+ *  - date: YYYY-MM-DD
+ *
+ */
+
 let config;
 
 
@@ -58,6 +66,17 @@ const methods = {
     path: '/api/0/orders/checkCreate',
     params: {
       request_timeout: 'time'
+    }
+  },
+  deliveryOrders: {
+    type: 'GET',
+    path: '/api/0/orders/deliveryOrders',
+    params: {
+      organization: 'string',
+      dateFrom: 'date',
+      dateTo: 'date',
+      deliveryTerminalId: 'string',
+      deliveryStatus: 'string'
     }
   }
 };
