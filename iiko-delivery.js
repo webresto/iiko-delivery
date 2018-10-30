@@ -78,6 +78,14 @@ const methods = {
       deliveryTerminalId: 'string',
       deliveryStatus: 'string'
     }
+  },
+  cancelOrder: {
+    type: 'POST',
+    path: '/api/0/orders/add_order_problem',
+    params: {
+      organization: 'string',
+      request_timeout: 'time'
+    }
   }
 };
 
