@@ -86,6 +86,31 @@ const methods = {
       organization: 'string',
       request_timeout: 'time'
     }
+  },
+  userCreateOrUpdate: {
+    type: 'POST',
+    path: '/api/0/customers/create_or_update',
+    params: {
+      organization: 'string'
+    }
+  },
+  userGetInfoByPhone: {
+    type: 'GET',
+    path: '/api/0/customers/get_customer_by_phone',
+    params: {
+      organization: 'string',
+      phone: 'string'
+    }
+  },
+  userUseBonuses: {
+    type: 'POST',
+    path: '/api/0/customers/withdraw_balance',
+    params: {}
+  },
+  userAddBonuses: {
+    type: 'POST',
+    path: '/api/0/customers/refill_balance',
+    params: {}
   }
 };
 
