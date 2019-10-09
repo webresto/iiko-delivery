@@ -111,6 +111,16 @@ const methods = {
     type: 'POST',
     path: '/api/0/customers/refill_balance',
     params: {}
+  },
+  userGetTransactions: {
+    type: 'GET',
+    path: '/api/0/organization/{organizationId}/transactions_report',
+    params: {
+      date_from: 'date',
+      date_to: 'date',
+      userId: 'string'
+    },
+    modifier: url => url.replace('{organizationId}', config.organization)
   }
 };
 
