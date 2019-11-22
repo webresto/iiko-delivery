@@ -1,25 +1,4 @@
 {
-  "_from": "git+https://github.com/pub42/iiko-delivery.git",
-  "_id": "iiko-delivery@0.0.2",
-  "_inBundle": false,
-  "_location": "/iiko-delivery",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "git",
-    "raw": "iiko-delivery@git+https://github.com/pub42/iiko-delivery.git",
-    "name": "iiko-delivery",
-    "escapedName": "iiko-delivery",
-    "rawSpec": "git+https://github.com/pub42/iiko-delivery.git",
-    "saveSpec": "git+https://github.com/pub42/iiko-delivery.git",
-    "fetchSpec": "https://github.com/pub42/iiko-delivery.git",
-    "gitCommittish": null
-  },
-  "_requiredBy": [
-    "/@sails-resto/core"
-  ],
-  "_resolved": "git+https://github.com/pub42/iiko-delivery.git#4f92b1ab3b4205999b60afcba299a1c65e085227",
-  "_spec": "iiko-delivery@git+https://github.com/pub42/iiko-delivery.git",
-  "_where": "D:\\Sites\\test-for-restocore\\node_modules\\@sails-resto\\core",
   "author": {
     "name": "42team"
   },
@@ -46,5 +25,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.3"
+  "version": "0.0.3",
+  "dependencies": {
+    "iiko-request": "0.0.5"
+  }
 }
