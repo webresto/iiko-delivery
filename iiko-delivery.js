@@ -1,23 +1,18 @@
 /**
- *
  * name: iiko-delivery
  * documentation: https://docs.google.com/document/d/1kuhs94UV_0oUkI2CI3uOsNo_dydmh9Q0MFoDWmhzwxc/edit#
  * author: pub42 (xziy, ...)
  *
  */
 
-
 /**
  * type:
  *  - date: YYYY-MM-DD
  *
  */
-
-let config;
-
-
 const request = require('iiko-request');
 
+let config;
 
 const methods = {
   getDeliveryTerminals: {
@@ -114,27 +109,21 @@ const methods = {
   }
 };
 
-////////////////////////////////////////////////////////////////////////////////
-exports.init = function (_config) {
+function init(_config) {
   config = _config;
   request.init(config);
-};
+}
 
-exports.api = function (method, params, data) {
+function api(method, params, data) {
   return new Promise((resolve, reject) => {
-
     // TODO: validation data for separate method
-    request.call(methods[method], params, methods[method].modifier, data).then(
-      result => {
-        resolve(result);
-      },
-      error => {
-        reject(error);
-      });
+    request.call(methods[method], params, methods[method].modifier, data)
+      .then(result => resolve(result),
+        error => reject(error));
   })
-};
+}
 
-exports.getApi = function (name) {
+function getApi(name) {
   if (!name)
     return Object.keys(methods);
 
@@ -142,4 +131,8 @@ exports.getApi = function (name) {
     return null;
 
   return methods[name];
-};
+}
+
+exports.init = init;
+exports.api = api;
+exports.getApi = getApi;
