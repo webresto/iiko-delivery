@@ -27,6 +27,6 @@
   },
   "version": "0.0.3",
   "dependencies": {
-    "iiko-request": "0.0.5"
+    "iiko-request": "git+https://github.com/pub42/iiko-request"
   }
 }

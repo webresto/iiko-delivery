@@ -118,8 +118,8 @@ function api(method, params, data) {
   return new Promise((resolve, reject) => {
     // TODO: validation data for separate method
     request.call(methods[method], params, methods[method].modifier, data)
-      .then(result => resolve(result),
-        error => reject(error));
+      .then(resolve)
+      .catch(reject);
   })
 }
 
