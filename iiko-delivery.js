@@ -106,6 +106,16 @@ const methods = {
     type: 'POST',
     path: '/api/0/customers/refill_balance',
     params: {}
+  },
+  userGetTransactions: {
+    type: 'GET',
+    path: '/api/0/organization/{organizationId}/transactions_report',
+    params: {
+      dateFrom: 'date',
+      dateTo: 'date',
+      userId: 'string'
+    },
+    modifier: url => url.replace('{organizationId}', config.organization)
   }
 };
 
@@ -117,6 +127,8 @@ function init(_config) {
 function api(method, params, data) {
   return new Promise((resolve, reject) => {
     // TODO: validation data for separate method
+    if (!methods[method])
+      reject('Method not found');
     request.call(methods[method], params, methods[method].modifier, data)
       .then(resolve)
       .catch(reject);
