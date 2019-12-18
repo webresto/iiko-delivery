@@ -116,6 +116,12 @@ const methods = {
       userId: 'string'
     },
     modifier: url => url.replace('{organizationId}', config.organization)
+  },
+  sendSMS: {
+    type: 'POST',
+    path: '/api/0/organization/{organizationId}/send_sms',
+    params: {},
+    modifier: url => url.replace('{organizationId}', config.organization)
   }
 };
 
