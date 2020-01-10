@@ -111,8 +111,8 @@ const methods = {
     type: 'GET',
     path: '/api/0/organization/{organizationId}/transactions_report',
     params: {
-      dateFrom: 'date',
-      dateTo: 'date',
+      date_from: 'date',
+      date_to: 'date',
       userId: 'string'
     },
     modifier: url => url.replace('{organizationId}', config.organization)
