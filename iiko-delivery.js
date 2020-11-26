@@ -122,6 +122,36 @@ const methods = {
     path: '/api/0/organization/{organizationId}/send_sms',
     params: {},
     modifier: url => url.replace('{organizationId}', config.organization)
+  },
+  getPaymentTypes: {
+    type: 'GET',
+    path: '/api/0/rmsSettings/getPaymentTypes',
+    params: {
+      organization: 'string'
+    }
+  },
+  getDiscounts: {
+    type: 'GET',
+    path: '/api/0/deliverySettings/deliveryDiscounts',
+    params: {
+      organization: 'string'
+    }
+  },
+  getUserHistory: {
+    type: 'GET',
+    path: '/api/0/orders/deliveryHistoryByPhone',
+    params: {
+      organization: 'string',
+      phone: 'string'
+    }
+  },
+  getOrderInfo: {
+    type: 'GET',
+    path: '/api/0/orders/info',
+    params: {
+      organization: 'string',
+      orderId: 'string'
+    }
   }
 };
 
@@ -132,7 +162,7 @@ function init(_config) {
 
 function api(method, params, data) {
   return new Promise((resolve, reject) => {
-    // TODO: validation data for separate method
+    // TODO: rewrite to TS :)
     if (!methods[method])
       reject('Method not found');
     request.call(methods[method], params, methods[method].modifier, data)
