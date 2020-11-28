@@ -1,17 +1,17 @@
 {
   "author": {
-    "name": "42team"
+    "name": "webresto"
   },
   "bugs": {
-    "url": "https://github.com/pub42/iiko-delivery/issues"
+    "url": "https://github.com/webresto/iiko-delivery/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
-    "iiko-request": "git+https://github.com/pub42/iiko-request.git"
+    "iiko-request": "latest"
   },
   "deprecated": false,
   "description": "api iiko delivery",
-  "homepage": "https://github.com/pub42/iiko-delivery#readme",
+  "homepage": "https://github.com/webresto/iiko-delivery#readme",
   "keywords": [
     "iikocard5",
     "nodejs",
@@ -28,5 +28,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
