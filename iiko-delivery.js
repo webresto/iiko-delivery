@@ -130,6 +130,13 @@ const methods = {
       organization: 'string'
     }
   },
+  getPaymentTypes: {
+    type: 'GET',
+    path: '/api/0/rmsSettings/getPaymentTypes',
+    params: {
+      organization: 'string'
+    }
+  },
   getDiscounts: {
     type: 'GET',
     path: '/api/0/deliverySettings/deliveryDiscounts',
@@ -137,22 +144,6 @@ const methods = {
       organization: 'string'
     }
   },
-  getUserHistory: {
-    type: 'GET',
-    path: '/api/0/orders/deliveryHistoryByPhone',
-    params: {
-      organization: 'string',
-      phone: 'string'
-    }
-  },
-  getOrderInfo: {
-    type: 'GET',
-    path: '/api/0/orders/info',
-    params: {
-      organization: 'string',
-      orderId: 'string'
-    }
-  }
 };
 
 function init(_config) {
